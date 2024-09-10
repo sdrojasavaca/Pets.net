@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/calendario.css"/>
+    <title>Calendario</title>
+    </head>
+    <body>
+        <nav id="sidebar">
+            <div class="logo">
+                <a href="pets.net.html"><img src="logoPets.net.png" alt="Logo Pets.net"width="170" height="56"></a>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Noticias</a></li>
+                <li><a href="#">Mascotas</a></li>
+                <li><a href="calendario.html">Calendario</a></li>
+                <li><a href="#">Instituciones</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Sugerencias</a></li>
+                <li><a href="#">Configuración</a></li>
+            </ul>
+        </nav>
+    
+        <div class="calendar-container">
+            <div class="calendar-header">
+                <button id="prevMonth">Anterior</button>
+                <span id="currentMonthYear"></span>
+                <button id="nextMonth">Siguiente</button>
+            </div>
+            <table id="calendar-body">
+                <thead>
+                    <tr>
+                        <th>Lun</th>
+                        <th>Mar</th>
+                        <th>Mié</th>
+                        <th>Jue</th>
+                        <th>Vie</th>
+                        <th>Sáb</th>
+                        <th>Dom</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <script src="JS/calendario.js"></script>
+    </body>
+    </html>
