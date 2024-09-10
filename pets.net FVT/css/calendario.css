@@ -1,5 +1,6 @@
 .calendar-container {
     width: 80%;
+    text-align: right;
     margin: 0 auto;
     border-collapse: collapse;
 }
