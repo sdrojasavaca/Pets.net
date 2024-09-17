@@ -3,13 +3,14 @@ body {
     background-color: #f0f0f0;
     margin: 0;
     padding: 0;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
-/* Estilo del encabezado */
+/* Header styling */
 header {
     margin-bottom: 20px;
 }
@@ -20,98 +21,45 @@ header h1 {
     text-align: center;
 }
 
-/* Contenedor principal con barra lateral y contenido central */
-.container {
-    display: flex;
-    width: 80%;
-    max-width: 1200px;
-    height: 80vh;
+/* Navigation list styling */
+nav {
     background-color: #fff;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo de la barra lateral */
-.sidebar {
-    width: 30%;
-    background-color: #4CAF50;
-    padding: 20px;
-    border-radius: 10px 0 0 10px;
-    display: flex;
-    flex-direction: column;
-}
-
-.config-list {
+ul.config-list {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-.config-list li {
+ul.config-list li {
     margin: 10px 0;
 }
 
-.config-list li a {
+/* Link styling */
+ul.config-list li a {
     text-decoration: none;
-    color: #fff;
+    color: #333;
     font-size: 1.2em;
-    padding: 10px;
+    padding: 10px 20px;
     display: block;
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.config-list li a:hover {
-    background-color: #333;
-    color: #dabbbbbe;
+/* Hover effects */
+ul.config-list li a:hover {
+    background-color: #4CAF50;
+    color: #fff;
 }
 
-/* Estilo de las opciones de configuración en el centro */
-.config-options {
-    flex: 1;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.config-options ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.config-options li {
-    margin: 20px 0;
-}
-
-.config-options label {
-    font-size: 1.2em;
-    margin-right: 10px;
-}
-
-input[type="range"] {
-    width: 200px;
-}
-
-select {
-    padding: 5px;
-    font-size: 1.1em;
-}
-
-/* Ajustes responsivos */
-@media (max-width: 800px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .sidebar {
-        width: 100%;
-        border-radius: 10px 10px 0 0;
-    }
-
-    .config-options {
-        width: 100%;
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    ul.config-list li a {
+        font-size: 1em;
+        padding: 10px;
     }
 }
