@@ -3,6 +3,31 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
+    background: #eee5e5;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+button{
+    font-size: 20px;
+    padding: 10 px 20 px;
+    border: none;
+    border-radius: 50px;
+    background: skyblue;
+    box-shadow:0 0 5px skyblue
+                0 0 5px skyblue;
+    transition: all 0.4s ease;
+    cursor: pointer;            
+
+}
+button:hover{
+    box-shadow: 0 0 5px skyblue,
+                0 0 25px skyblue,
+                0 0 50px skyblue,
+                0 0 100px skyblue,
+                0 0 200px skyblue;
+
+
 }
 
 #sidebar {
@@ -43,7 +68,7 @@ body {
 #sidebar ul li a:hover {
     background-color: #999;
     border-radius: 10px;
-    padding: 7px;
+    padding: 10px;
 
 }
 
