@@ -115,3 +115,17 @@ select {
         width: 100%;
     }
 }
+/* Estilos para el modo noche */
+body.noche, .sidebar.noche, nav ul.noche {
+    background-color: #121212;
+    color: #fff;
+}
+
+.sidebar.noche a, nav ul.noche a {
+    color: #fff;
+}
+
+.sidebar.noche a:hover, nav ul.noche a:hover {
+    background-color: #333;
+    color: #dabbbbbe;
+}
