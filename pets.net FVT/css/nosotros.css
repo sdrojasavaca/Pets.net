@@ -5,34 +5,82 @@ body {
     padding: 0;
     background: #eee5e5;
 }
-
 #sidebar {
     width: 250px;
     background-color: #f4f4f4;
-    color: black;
-    height: 100vh;
+    color: white;
+    height: 101% ;
     position: fixed;
-    top: 0;
     left: 0;
     display: flex;
     flex-direction: column;
 }
 
+
 #sidebar .logo {
-    padding: 20px;
-    text-align: right;
-    font-size: 24px;
-    background-color: #f4f4f4;
+    padding: 15px 10px 10px 10px;
+    text-align: left;
+
 }
 
+
+.logo-small {
+    display: none;
+}
+
+#sidebar.collapsed {
+    width: 70px;
+}
+
+@media (max-width: 1080px) {
+
+    #sidebar{
+        width: 70px;
+    }
+    .logo-large {
+        display: none;
+    }
+
+    .logo-small {
+        display: block;
+    }
+    #sidebar ul li span {
+        display: none;
+
+    }
+    #sidebar ul li a:hover {
+        background-color: #47ff2bb0;
+        border-radius: 100px;
+        box-shadow:  4px 1px 0px 10000px #47ff2bb0;
+    }
+}
+
+
 #sidebar ul {
+    padding: 0PX 0PX 0PX 20PX;
     list-style: none;
-    padding: 0;
-    margin: 10px;
+    position: fixed;
+    margin-top: 100px;
+    align-items: center;
+    gap: 10px; 
+}
+#sidebar ul li img {
+ /*esto es para modificar los iconos de coso*/
+
+}
+
+#sidebar ul li span {
+    position:relative;
+    top: -6px;
+    margin-left: 20px;
+    font-size:larger;
 }
 
 #sidebar ul li {
-    padding: 15px 20px;
+    
+    padding: 0px 1px 25px 0px;
+    padding-left: -1px;
+
 }
 
 #sidebar ul li a {
@@ -45,8 +93,10 @@ body {
 #sidebar ul li a:hover {
     background-color: #47ff2bb0;
     border-radius: 100px;
-    box-shadow: -4px -1px 0px 10px #47ff2bb0;
+    
+    box-shadow: 1px -2px 1px 10px #47ff2bb0;
 }
+
 
 #main-content {
     margin-left: 250px;

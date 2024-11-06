@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 15px;
-    padding: 15px;
+    margin: 0;
+    padding: 0;
     display: flex;
     background: #eee5e5;
     justify-content: center;
@@ -13,32 +13,20 @@ body {
     width: 250px;
     background-color: #f4f4f4;
     color: white;
-    height: 101 %;
+    height: 101% ;
     position: fixed;
     left: 0;
     display: flex;
     flex-direction: column;
 }
-#sidebar div button{
-    text-align: left;
-    padding: 0px 0px 0px 0px;
-    margin-left: 10%;
 
-}
+
 #sidebar .logo {
-    margin: 10px 0px 0px 10px;
+    padding: 15px 10px 10px 10px;
     text-align: left;
 
 }
-.Logo-IconMenu {
-    text-align: left;
-    display: flex;
-    align-items: center;
-    gap: 10px; 
-    padding: 0px 0px 0px -20px;
-    align-items: left;
 
-}
 
 .logo-small {
     display: none;
@@ -49,10 +37,7 @@ body {
 }
 
 @media (max-width: 1080px) {
-    .Logo-IconMenu {
-        flex-direction: column; 
-        align-items: center; 
-    }
+
     #sidebar{
         width: 70px;
     }
@@ -67,11 +52,16 @@ body {
         display: none;
 
     }
-
+    #sidebar ul li a:hover {
+        background-color: #47ff2bb0;
+        border-radius: 100px;
+        box-shadow:  4px 1px 0px 10000px #47ff2bb0;
+    }
 }
 
 
 #sidebar ul {
+    padding: 0PX 0PX 0PX 20PX;
     list-style: none;
     position: fixed;
     margin-top: 100px;
@@ -92,7 +82,7 @@ body {
 
 #sidebar ul li {
     
-    padding: 0px 5% 25px 0px;
+    padding: 0px 1px 25px 0px;
     padding-left: -1px;
 
 }
@@ -107,7 +97,8 @@ body {
 #sidebar ul li a:hover {
     background-color: #47ff2bb0;
     border-radius: 100px;
-    box-shadow: -4px -1px 0px 10px #47ff2bb0;
+    
+    box-shadow: 1px -2px 1px 10px #47ff2bb0;
 }
 
 
