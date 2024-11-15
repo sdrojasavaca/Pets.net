@@ -1,21 +1,25 @@
 // buscador //      // buscador //      // buscador //
-        document.addEventListener('DOMContentLoaded', function () {
-            const inputBusqueda = document.querySelector('input[type="text"]');
-            const refugios = document.querySelectorAll('.refugio-item');
+document.addEventListener('DOMContentLoaded', function () {
+    const inputBusqueda = document.getElementById('search-input');
+    const sectionsVet = document.querySelectorAll('.vet-locations .section');
 
-            inputBusqueda.addEventListener('input', function () {
-                const filtro = inputBusqueda.value.toLowerCase();
-                
-                refugios.forEach(function (refugio) {
-                    const texto = refugio.textContent.toLowerCase();
-                    if (texto.includes(filtro)) {
-                        refugio.style.display = '';
-                    } else {
-                        refugio.style.display = 'none';
-                    }
-                });
-            });
+    inputBusqueda.addEventListener('input', function () {
+        filtroVetLocalidad();
+    });
+
+    function filtroVetLocalidad() {
+        const texto = inputBusqueda.value.toLowerCase();
+        sectionsVet.forEach(section => {
+            const localidad = section.getAttribute('data-localidad').toLowerCase();
+            if (localidad.includes(texto)) {
+                section.style.display = '';
+            } else {
+                section.style.display = 'none';
+            }
         });
+    }
+});
+
 // fin buscador //    // fin buscador //    // fin buscador //
 
 
