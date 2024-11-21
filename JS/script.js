@@ -1,3 +1,95 @@
+// Tarjetas  //      // Tarjetas //      // Tarjetas //
+    /**
+     * Función para crear una tarjeta detallada y añadirla al contenedor.
+     * @param {string} imageUrl - URL de la imagen.
+     * @param {string} name - Nombre del elemento.
+     * @param {string} especie - Animal al que pertenece el elemento.
+     * @param {string} raza - Raza del elemento.
+     * @param {string} sexo - Masculino o femenino del elemento.
+     * @param {string} tamanho - Descripción del tamaño del elemento.
+     * @param {string} localidad - Localidad del elemento.
+     * @param {string} features - Descripción o características.
+     */
+    function createCard(imageUrl, name, especie, raza, sexo, tamanho, localidad, features) {
+      if (!imageUrl || !name || !especie || !raza || !sexo || !tamanho || !localidad || !features) {
+        console.error('Todos los parámetros deben ser "not null".');
+        return;
+      }
+
+      // Crear elementos de la tarjeta
+      const card = document.createElement('div');
+      card.className = 'card';
+
+      const img = document.createElement('img');
+      img.src = imageUrl;
+      img.alt = name;
+
+      const cardBody = document.createElement('div');
+      cardBody.className = 'card-body';
+
+      const cardTitle = document.createElement('h3');
+      cardTitle.className = 'card-title';
+      cardTitle.textContent = name;
+
+      const cardEspecie = document.createElement('p');
+      cardEspecie.className = 'card-detail';
+      cardEspecie.textContent = `Especie: ${especie}`;
+
+      const cardRaza = document.createElement('p');
+      cardRaza.className = 'card-detail';
+      cardRaza.textContent = `Raza: ${raza}`;
+
+      const cardSexo = document.createElement('p');
+      cardSexo.className = 'card-detail';
+      cardSexo.textContent = `Sexo: ${sexo}`;
+
+      const cardTamanho = document.createElement('p');
+      cardTamanho.className = 'card-detail';
+      cardTamanho.textContent = `Tamaño: ${tamanho}`;
+
+      const cardLocalidad = document.createElement('p');
+      cardLocalidad.className = 'card-detail';
+      cardLocalidad.textContent = `Localidad: ${localidad}`;
+
+      const cardFeatures = document.createElement('p');
+      cardFeatures.className = 'card-features';
+      cardFeatures.textContent = `Características: ${features}`;
+
+      // Ensamblar la tarjeta
+      cardBody.appendChild(cardTitle);
+      cardBody.appendChild(cardEspecie);
+      cardBody.appendChild(cardRaza);
+      cardBody.appendChild(cardSexo);
+      cardBody.appendChild(cardTamanho);
+      cardBody.appendChild(cardLocalidad);
+      cardBody.appendChild(cardFeatures);
+      card.appendChild(img);
+      card.appendChild(cardBody);
+
+      // Agregar la tarjeta al contenedor
+      const container = document.getElementById('cardContainer');
+      container.appendChild(card);
+    }
+
+    // Ejemplo de uso
+    const exampleCards = [
+      ['https://via.placeholder.com/250x150', 'Max', 'Perro', 'Labrador', 'Masculino', 'Grande', 'Córdoba', 'Muy activo y amigable, ideal para familias con niños.'],
+      ['https://via.placeholder.com/250x150', 'Luna', 'Gato', 'Persa', 'Femenino', 'Pequeño', 'La Falda', 'Cariñosa y tranquila, perfecta para departamentos.'],
+      ['https://via.placeholder.com/250x150', 'Rocky', 'Perro', 'Pitbull', 'Masculino', 'Mediano', 'Villa Carlos Paz', 'Leal y protector, necesita entrenamiento.'],
+      ['https://via.placeholder.com/250x150', 'Bella', 'Conejo', 'Mini Lop', 'Femenino', 'Pequeño', 'Mendiolaza', 'Dócil y juguetona, perfecta para niños.'],
+      ['https://via.placeholder.com/250x150', 'Simba', 'Gato', 'Maine Coon', 'Masculino', 'Grande', 'Alta Gracia', 'Independiente pero cariñoso, necesita espacio.'],
+      ['https://via.placeholder.com/250x150', 'Max', 'Perro', 'Labrador', 'Masculino', 'Grande', 'Córdoba', 'Muy activo y amigable, ideal para familias con niños.'],
+      ['https://via.placeholder.com/250x150', 'Luna', 'Gato', 'Persa', 'Femenino', 'Pequeño', 'La Falda', 'Cariñosa y tranquila, perfecta para departamentos.'],
+      ['https://via.placeholder.com/250x150', 'Rocky', 'Perro', 'Pitbull', 'Masculino', 'Mediano', 'Villa Carlos Paz', 'Leal y protector, necesita entrenamiento.'],
+      ['https://via.placeholder.com/250x150', 'Bella', 'Conejo', 'Mini Lop', 'Femenino', 'Pequeño', 'Mendiolaza', 'Dócil y juguetona, perfecta para niños.'],
+      ['https://via.placeholder.com/250x150', 'Simba', 'Gato', 'Maine Coon', 'Masculino', 'Grande', 'Alta Gracia', 'Independiente pero cariñoso, necesita espacio.'],
+    ];
+
+    exampleCards.forEach(cardData => createCard(...cardData));
+
+// Fin Tarjetas  //      // Fin Tarjetas //      // Fin Tarjetas //
+
+
 // buscador //      // buscador //      // buscador //
 document.addEventListener('DOMContentLoaded', function () {
     const inputBusqueda = document.getElementById('search-input');
