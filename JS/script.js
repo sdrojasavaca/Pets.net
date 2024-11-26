@@ -17,6 +17,10 @@
         console.error('Todos los parámetros deben ser "not null".');
         return;
       }
+        // Crear el enlace que envolverá la tarjeta
+        const link = document.createElement('a');
+        link.href = 'mascotas.html';
+        link.className = 'card-link';
 
       // Crear elementos de la tarjeta
       const card = document.createElement('div');
@@ -57,7 +61,7 @@
       cardFeatures.className = 'card-features';
       cardFeatures.textContent = `Características: ${features}`;
 
-      // Ensamblar la tarjeta
+    // Ensamblar la tarjeta
       cardBody.appendChild(cardTitle);
       cardBody.appendChild(cardEspecie);
       cardBody.appendChild(cardRaza);
@@ -67,10 +71,12 @@
       cardBody.appendChild(cardFeatures);
       card.appendChild(img);
       card.appendChild(cardBody);
+    // Envolver la tarjeta en el enlace
+    link.appendChild(card);
 
-      // Agregar la tarjeta al contenedor
-      const container = document.getElementById('cardContainer');
-      container.appendChild(card);
+    // Agregar la tarjeta al contenedor
+    const container = document.getElementById('cardContainer');
+    container.appendChild(link);
     }
 
     // Ejemplo de uso
@@ -101,6 +107,10 @@ function createLocalidadCard(imageUrl, localidad) {
       console.error('La URL de la imagen y el nombre de la localidad son obligatorios.');
       return;
     }
+    // Crear el enlace que envolverá la tarjeta
+    const link = document.createElement('a');
+    link.href = 'localidades.html';
+    link.className = 'card-link';
   
     // Crear elementos de la tarjeta
     const card = document.createElement('div');
@@ -122,11 +132,13 @@ function createLocalidadCard(imageUrl, localidad) {
     card.appendChild(img);
     card.appendChild(cardBody);
   
+    // Envolver la tarjeta en el enlace
+    link.appendChild(card);
+
     // Agregar la tarjeta al contenedor
     const container = document.getElementById('localidadesContainer');
-    container.appendChild(card);
-  }
-  
+    container.appendChild(link);
+}
   // Ejemplo de uso con localidades de Punilla
   const localidadesPunilla = [
     ['https://via.placeholder.com/250x150', 'Villa Carlos Paz'],
