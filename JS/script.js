@@ -1,4 +1,6 @@
 // Tarjetas  //      // Tarjetas //      // Tarjetas //
+    ////////////////////////// MASCOTAS PARA ADOPTAR /////////////////////////////
+    
     /**
      * Función para crear una tarjeta detallada y añadirla al contenedor.
      * @param {string} imageUrl - URL de la imagen.
@@ -84,8 +86,65 @@
       ['https://via.placeholder.com/250x150', 'Bella', 'Conejo', 'Mini Lop', 'Femenino', 'Pequeño', 'Mendiolaza', 'Dócil y juguetona, perfecta para niños.'],
       ['https://via.placeholder.com/250x150', 'Simba', 'Gato', 'Maine Coon', 'Masculino', 'Grande', 'Alta Gracia', 'Independiente pero cariñoso, necesita espacio.'],
     ];
+      
 
     exampleCards.forEach(cardData => createCard(...cardData));
+
+    ////////////////////////// LOCALIDADES /////////////////////////////
+    /**
+ * Función para crear una tarjeta de localidad y añadirla al contenedor.
+ * @param {string} imageUrl - URL de la imagen.
+ * @param {string} localidad - Nombre de la localidad.
+ */
+function createLocalidadCard(imageUrl, localidad) {
+    if (!imageUrl || !localidad) {
+      console.error('La URL de la imagen y el nombre de la localidad son obligatorios.');
+      return;
+    }
+  
+    // Crear elementos de la tarjeta
+    const card = document.createElement('div');
+    card.className = 'card1';
+  
+    const img = document.createElement('img');
+    img.src = imageUrl;
+    img.alt = localidad;
+  
+    const cardBody = document.createElement('div');
+    cardBody.className = 'card-body1';
+  
+    const cardTitle = document.createElement('h3');
+    cardTitle.className = 'card-title1';
+    cardTitle.textContent = localidad;
+  
+    // Ensamblar la tarjeta
+    cardBody.appendChild(cardTitle);
+    card.appendChild(img);
+    card.appendChild(cardBody);
+  
+    // Agregar la tarjeta al contenedor
+    const container = document.getElementById('localidadesContainer');
+    container.appendChild(card);
+  }
+  
+  // Ejemplo de uso con localidades de Punilla
+  const localidadesPunilla = [
+    ['https://via.placeholder.com/250x150', 'Villa Carlos Paz'],
+    ['https://via.placeholder.com/250x150', 'Cosquín'],
+    ['https://via.placeholder.com/250x150', 'La Falda'],
+    ['https://via.placeholder.com/250x150', 'Capilla del Monte'],
+    ['https://via.placeholder.com/250x150', 'Tanti'],
+    ['https://via.placeholder.com/250x150', 'Valle Hermoso'],
+    ['https://via.placeholder.com/250x150', 'Huerta Grande'],
+    ['https://via.placeholder.com/250x150', 'Bialet Masse'],
+    ['https://via.placeholder.com/250x150', 'San Roque'],
+    ['https://via.placeholder.com/250x150', 'Santa Maria'],
+    ['https://via.placeholder.com/250x150', 'Casa Grande'],
+    ['https://via.placeholder.com/250x150', 'La Cumbre'],
+  ];
+  
+  localidadesPunilla.forEach(([imageUrl, localidad]) => createLocalidadCard(imageUrl, localidad));
+  
 
 // Fin Tarjetas  //      // Fin Tarjetas //      // Fin Tarjetas //
 
