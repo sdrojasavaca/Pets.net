@@ -79,18 +79,18 @@
     container.appendChild(link);
     }
 
-    // Ejemplo de uso
+    // Ejemplo de usoz
     const exampleCards = [
-      ['https://via.placeholder.com/250x150', 'Max', 'Perro', 'Labrador', 'Masculino', 'Grande', 'Córdoba', 'Muy activo y amigable, ideal para familias con niños.'],
-      ['https://via.placeholder.com/250x150', 'Luna', 'Gato', 'Persa', 'Femenino', 'Pequeño', 'La Falda', 'Cariñosa y tranquila, perfecta para departamentos.'],
-      ['https://via.placeholder.com/250x150', 'Rocky', 'Perro', 'Pitbull', 'Masculino', 'Mediano', 'Villa Carlos Paz', 'Leal y protector, necesita entrenamiento.'],
-      ['https://via.placeholder.com/250x150', 'Bella', 'Conejo', 'Mini Lop', 'Femenino', 'Pequeño', 'Mendiolaza', 'Dócil y juguetona, perfecta para niños.'],
-      ['https://via.placeholder.com/250x150', 'Simba', 'Gato', 'Maine Coon', 'Masculino', 'Grande', 'Alta Gracia', 'Independiente pero cariñoso, necesita espacio.'],
-      ['https://via.placeholder.com/250x150', 'Max', 'Perro', 'Labrador', 'Masculino', 'Grande', 'Córdoba', 'Muy activo y amigable, ideal para familias con niños.'],
-      ['https://via.placeholder.com/250x150', 'Luna', 'Gato', 'Persa', 'Femenino', 'Pequeño', 'La Falda', 'Cariñosa y tranquila, perfecta para departamentos.'],
-      ['https://via.placeholder.com/250x150', 'Rocky', 'Perro', 'Pitbull', 'Masculino', 'Mediano', 'Villa Carlos Paz', 'Leal y protector, necesita entrenamiento.'],
-      ['https://via.placeholder.com/250x150', 'Bella', 'Conejo', 'Mini Lop', 'Femenino', 'Pequeño', 'Mendiolaza', 'Dócil y juguetona, perfecta para niños.'],
-      ['https://via.placeholder.com/250x150', 'Simba', 'Gato', 'Maine Coon', 'Masculino', 'Grande', 'Alta Gracia', 'Independiente pero cariñoso, necesita espacio.'],
+      ['img/mascotas/perro1.jpg', 'Max', 'Perro', 'Labrador', 'Masculino', 'Grande', 'Córdoba', 'Muy activo y amigable, ideal para familias con niños.'],
+      ['img/mascotas/gato1.jpg', 'Luna', 'Gato', 'Persa', 'Femenino', 'Pequeño', 'La Falda', 'Cariñosa y tranquila, perfecta para departamentos.'],
+      ['img/mascotas/perro2.jpg', 'Rocky', 'Perro', 'Pitbull', 'Masculino', 'Mediano', 'Villa Carlos Paz', 'Leal y protector, necesita entrenamiento.'],
+      ['img/mascotas/conejo1.jpg', 'Bella', 'Conejo', 'Mini Lop', 'Femenino', 'Pequeño', 'Mendiolaza', 'Dócil y juguetona, perfecta para niños.'],
+      ['img/mascotas/gato2.jpg', 'Simba', 'Gato', 'Maine Coon', 'Masculino', 'Grande', 'Alta Gracia', 'Independiente pero cariñoso, necesita espacio.'],
+      ['img/mascotas/perro3.jpg', 'Max', 'Perro', 'Labrador', 'Masculino', 'Grande', 'Córdoba', 'Muy activo y amigable, ideal para familias con niños.'],
+      ['img/mascotas/gato3.jpg', 'Luna', 'Gato', 'Persa', 'Femenino', 'Pequeño', 'La Falda', 'Cariñosa y tranquila, perfecta para departamentos.'],
+      ['img/mascotas/perro4.jpg', 'Rocky', 'Perro', 'Pitbull', 'Masculino', 'Mediano', 'Villa Carlos Paz', 'Leal y protector, necesita entrenamiento.'],
+      ['img/mascotas/conejo2.jpg', 'Bella', 'Conejo', 'Mini Lop', 'Femenino', 'Pequeño', 'Mendiolaza', 'Dócil y juguetona, perfecta para niños.'],
+      ['img/mascotas/gato4.jpg', 'Simba', 'Gato', 'Maine Coon', 'Masculino', 'Grande', 'Alta Gracia', 'Independiente pero cariñoso, necesita espacio.'],
     ];
       
 
