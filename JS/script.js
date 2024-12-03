@@ -161,6 +161,47 @@ function createLocalidadCard(imageUrl, localidad) {
 // Fin Tarjetas  //      // Fin Tarjetas //      // Fin Tarjetas //
 
 
+
+// Carrusel  //      // Carrusel //      // Carrusel //
+document.addEventListener('DOMContentLoaded', function() {
+    const imagenes = document.querySelectorAll('.carrusel-imagenes img');
+    const puntos = document.querySelectorAll('.punto');
+    let indiceActual = 0;
+    const intervalo = 3000; // Cambiar de imagen cada 3 segundos
+
+    // Función para actualizar el carrusel
+    function actualizarCarrusel() {
+        imagenes.forEach((img, index) => {
+            img.classList.remove('activo');
+            puntos[index].classList.remove('activo');
+            if (index === indiceActual) {
+                img.classList.add('activo');
+                puntos[index].classList.add('activo');
+            }
+        });
+    }
+
+    // Evento para los puntos de navegación
+    puntos.forEach((punto, index) => {
+        punto.addEventListener('click', () => {
+            indiceActual = index;
+            actualizarCarrusel();
+        });
+    });
+
+    // Función para avanzar al siguiente índice
+    function siguienteImagen() {
+        indiceActual = (indiceActual + 1) % imagenes.length; // Volver al inicio si se llega al final
+        actualizarCarrusel();
+    }
+
+    // Iniciar el movimiento automático
+    setInterval(siguienteImagen, intervalo);
+});
+
+// Fin Carrusel  //      // Fin Carrusel //      // Fin Carrusel //
+
+
 // buscador //      // buscador //      // buscador //
 document.addEventListener('DOMContentLoaded', function () {
     const inputBusqueda = document.getElementById('search-input');

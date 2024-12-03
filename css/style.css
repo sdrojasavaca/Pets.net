@@ -185,6 +185,61 @@ body {
     }
 
 
+
+/* Estilos para el carrusel *//* Estilos para el carrusel */
+    .carrusel {
+        position: relative;
+        width: 100%; /* Ajustar al contenedor */
+        max-width: 600px;
+        overflow: hidden;
+        border-radius: 15px; /* Bordes redondeados del carrusel */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        margin: 20px auto; /* Centrar el carrusel */
+    }
+
+    .carrusel-imagenes {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .carrusel-imagenes img {
+        width: 100%;
+        border-radius: 15px; /* Bordes redondeados de las imágenes */
+        display: none; /* Ocultar imágenes por defecto */
+    }
+
+    .carrusel-imagenes img.activo {
+        display: block; /* Mostrar solo la imagen activa */
+    }
+
+    .navegacion {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+    }
+    .puntos-navegacion {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .punto {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        margin: 0 5px;
+        border-radius: 50%;
+        background-color: #bbb;
+        cursor: pointer;
+    }
+
+    .punto.activo {
+        background-color: #717171; /* Color del punto activo */
+    }
+
+
 /* Tarjetas styles */       /* Tarjetas styles */       /* Tarjetas styles */
 
         .card-container {
